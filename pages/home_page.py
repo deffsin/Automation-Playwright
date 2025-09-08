@@ -1,4 +1,3 @@
-from playwright.sync_api import Page
 from locators.home_page_locators import HomePageLocators
 from pages.base_page import BasePage
 

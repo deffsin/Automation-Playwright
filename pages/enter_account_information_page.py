@@ -17,3 +17,8 @@ class EnterAccountInformationPage(BasePage):
             raise ValueError("Title must be 'Mr' or 'Mrs'")
 
         self.page.locator(EnterAccountInformationPageLocators.PASSWORD_INPUT).fill(password)
+
+    def enter_date_of_birth(self, day, month, year):
+        self.page.locator(EnterAccountInformationPageLocators.DATE_OF_BIRTH_DAY).select_option(str(day))
+        self.page.locator(EnterAccountInformationPageLocators.DATE_OF_BIRTH_MONTH).select_option(str(month))
+        self.page.locator(EnterAccountInformationPageLocators.DATE_OF_BIRTH_YEAR).select_option(str(year))

@@ -35,4 +35,6 @@ class TestFullRegistrationUserFlow:
         assert enter_account_information.is_enter_account_information_text_visible(), "'Enter account information' text is not visible"
         enter_account_information.enter_account_information(title=title, password=password)
 
+        enter_account_information.enter_date_of_birth(day=4, month=9, year=2000)
+
         time.sleep(3)
